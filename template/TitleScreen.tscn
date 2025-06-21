@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://8u73soiwb6yq"]
+
+[ext_resource type="Script" uid="uid://d0afuwmb6rmq8" path="res://template/title_screen.gd" id="1_dvbkw"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_dvbkw")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Game Title"
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Start" type="Button" parent="Buttons"]
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 384.0
+offset_bottom = 384.0
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="Buttons"]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 384.0
+offset_bottom = 512.0
+text = "Settings
+"
+
+[node name="Exit" type="Button" parent="Buttons"]
+offset_left = 64.0
+offset_top = 576.0
+offset_right = 384.0
+offset_bottom = 640.0
+text = "Quit"
+
+[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
