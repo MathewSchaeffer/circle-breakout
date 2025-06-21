@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi1phpkoj0udu"]
+
+[ext_resource type="Script" uid="uid://b1cnqws185yxf" path="res://scenes/circle.gd" id="1_wcjn7"]
+
+[node name="Circle" type="Node2D"]
+script = ExtResource("1_wcjn7")
+
+[node name="Spawner" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-64, -192, 64, -192, 192, -64, 192, 56, 192, 64, 64, 192, -64, 192, -192, 64, -192, -64)

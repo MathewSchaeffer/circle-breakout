@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0nv7av5lu2yb"]
+[gd_scene load_steps=3 format=3 uid="uid://c0nv7av5lu2yb"]
 
 [ext_resource type="Script" uid="uid://bohdmk681elkg" path="res://tempfolder/level_1.gd" id="1_1fa48"]
+[ext_resource type="PackedScene" uid="uid://bi1phpkoj0udu" path="res://scenes/circle.tscn" id="2_jirdo"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_1fa48")
@@ -9,3 +10,14 @@ script = ExtResource("1_1fa48")
 offset_right = 192.0
 offset_bottom = 54.0
 text = "Level 1"
+
+[node name="Circle" parent="." instance=ExtResource("2_jirdo")]
+spawnNumber = 10
+
+[node name="Circle2" parent="." instance=ExtResource("2_jirdo")]
+polygonScale = Vector2(1.2, 1.2)
+spawnNumber = 12
+
+[node name="Circle3" parent="." instance=ExtResource("2_jirdo")]
+polygonScale = Vector2(1.4, 1.4)
+spawnNumber = 14
